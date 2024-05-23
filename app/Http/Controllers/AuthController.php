@@ -99,9 +99,8 @@ class AuthController extends Controller
             'role' => 'user',
         ]);
 
-        Auth::login($user);
-
-        return redirect('dashboard');
+        // Redirect to the login page after registration
+        return redirect('login')->with('success', 'Registrasi berhasil! Silakan login untuk melanjutkan.');
     }
 
     public function logout(Request $request)
