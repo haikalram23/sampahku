@@ -22,6 +22,7 @@ Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->midd
 // routes/web.php
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/pickup-requests/history', [PickupRequestController::class, 'history'])->name('pickup_requests.history');
     Route::get('/pickup-requests/create', [PickupRequestController::class, 'create'])->name('pickup_requests.create');
     Route::post('/pickup-requests', [PickupRequestController::class, 'store'])->name('pickup_requests.store');
     Route::get('/pickup-requests/{pickupRequest}/schedule', [PickupRequestController::class, 'schedule'])->name('pickup_requests.schedule');

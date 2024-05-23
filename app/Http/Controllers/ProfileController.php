@@ -23,9 +23,9 @@ class ProfileController extends Controller
             'email' => 'required|string|email|max:255|unique:users,email,' . Auth::id(),
             'alamat' => 'required|string|max:255',
             'no_telepon' => 'required|string|max:15',
-            'kota' => 'required|string|max:255',
-            'kecamatan' => 'required|string|max:255',
-            'desa' => 'required|string|max:255',
+            'kota' => 'nullable|string|max:255',
+            'kecamatan' => 'nullable|string|max:255',
+            'desa' => 'nullable|string|max:255',
             'foto_profil' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 

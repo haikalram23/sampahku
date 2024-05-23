@@ -5,8 +5,8 @@
 @section('content')
 <div class="min-h-[85vh] flex flex-col justify-center items-center">
     <h1 class="text-3xl font-bold mb-6 text-gray-800 my-auto text-center">Pickup Request</h1>
-    <div class="w-4/5 mx-auto my-auto flex justify-between items-center px-8 py-6 border border-gray-300 rounded-lg">
-        <div class="w-1/4 font-medium flex flex-col gap-10">
+    <div class="w-4/5 mx-auto my-auto flex flex-col lg:flex-row justify-between items-center px-8 py-6 border border-gray-300 rounded-lg">
+        <div class="w-full lg:w-1/4 font-medium flex flex-col gap-5 lg:gap-10 pb-4 lg:pb-0">
             <p class="text-gray-500">JPT00{{ $pickupRequest->id }}</p>
             <div>
                 <p class="text-gray-500">Nama Nasabah</p>
@@ -17,7 +17,7 @@
                 <p class="text-gray-800">{{ $pickupRequest->alamat }}</p>
             </div>
         </div>
-        <div class="w-2/4 font-medium flex flex-col gap-10 border-x px-24 border-gray-300">
+        <div class="w-full lg:w-2/4 font-medium flex flex-col gap-3 border-y py-4 lg:py-0 lg:border-x lg:px-24 border-gray-300">
             <div class="flex flex-row justify-between">
                 <p class="text-gray-500">Jenis Sampah</p>
                 <p class="text-gray-800">{{ $pickupRequest->jenis_sampah }}</p>
@@ -35,7 +35,7 @@
                 <p class="text-gray-800">{{ $pickupRequest->jam }}</p>
             </div>
         </div>
-        <div class="1/4 flex justify-evenly items-center flex-col gap-4">
+        <div class="w-full lg:w-1/4 flex justify-evenly items-center pt-4 lg:pt-0 flex-col gap-4">
             @if($pickupRequest->status === 'tunggu')
             <form method="POST" action="{{ route('admin.pickup-requests.approve', $pickupRequest->id) }}">
                 @csrf

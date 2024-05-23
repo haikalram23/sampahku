@@ -57,6 +57,14 @@ class PickupRequestController extends Controller
         return view('pickup_requests.status', compact('pickupRequest'));
     }
 
+    public function history()
+    {
+        $user = Auth::user();
+        $pickupRequests = PickupRequest::where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(5);
+
+        return view('pickup_requests.history', compact('pickupRequests'));
+    }
+
     public function index()
     {
         $pickupRequests = PickupRequest::paginate(5);

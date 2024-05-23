@@ -12,6 +12,7 @@ export default {
             },
             backgroundImage: {
                 "auth-bg": "url('/public/images/banner.png')",
+                "auth-bg-mobile": "url('/public/images/banner-raw.png')",
             },
         },
         fontFamily: {

@@ -4,7 +4,7 @@
 @section('title', 'Minta Jemput')
 
 @section('content')
-<div class="container mx-auto w-1/2 py-24">
+<div class="container px-6 lg:px-0 mx-auto w-full lg:w-1/2 py-24">
     <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">Minta Jemput Sampah</h1>
 
     <form method="POST" action="{{ route('pickup_requests.store') }}" class="border border-gray-300 px-12 py-8 rounded-xl">
@@ -29,13 +29,13 @@
 
         <div class="mb-4">
             <label for="berat_sampah" class="block text-gray-700 mb-2 font-medium">Berat Sampah (dalam kg):</label>
-            <div class="flex items-center w-1/4">
+            <div class="flex items-center w-full lg:w-1/4">
                 <input type="number" step="0.1" id="berat_sampah" name="berat_sampah" class="shadow appearance-none border rounded-l-lg w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <span class="shadow border rounded-r-lg px-3 py-2 bg-gray-200 text-gray-700">kg</span>
             </div>
         </div>
 
-        <div class="flex justify-end">
+        <div class="flex justify-center lg:justify-end">
             <button type="submit" class="bg-primary hover:bg-primary/80 text-white font-semibold py-2 px-24 rounded-lg focus:outline-none focus:shadow-outline">
                 Pilih Jadwal
             </button>
