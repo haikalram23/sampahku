@@ -8,11 +8,16 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-gray-100 flex items-center justify-between w-full">
-    <div class="bg-primary w-full lg:w-1/2 lg:h-screen flex items-center justify-center">
+<body class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between w-full">
+    <div class="bg-primary w-full lg:w-1/2 lg:h-screen hidden lg:flex items-center justify-center">
         <p class="text-6xl font-bold text-center text-white">Sampahku!</p>
     </div>
-    <form method="POST" action="{{ route('login') }}" class="flex flex-col text-primary justify-center w-full lg:w-1/2 px-24 gap-5">
+    <form method="POST" action="{{ route('login') }}" class="flex flex-col text-primary justify-center w-full h-screen lg:w-1/2 px-24 gap-5">
+        @if (session('success'))
+        <div class="bg-primary text-white p-4 rounded-lg mb-4">
+            {{ session('success') }}
+        </div>
+        @endif
         <p class="font-bold text-3xl text-center mb-5">Log In</p>
         @csrf
         <div>
