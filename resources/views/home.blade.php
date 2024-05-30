@@ -14,7 +14,7 @@
         <p class="text-6xl font-bold text-center text-white">Sampahku!</p>
     </div>
     <div class="flex flex-col justify-center h-screen w-full lg:w-1/2 lg:h-screen px-16">
-        <h1 class="text-4xl font-bold mb-5">Dari sampah jadi <span class="text-primary">RUPIAH</span>!</h1>
+        <h1 class="text-4xl font-bold mb-5">Dari sampah jadi <span class="text-primary">BERKAH</span>!</h1>
         <p class="text-xl mb-8 font-semibold">bersama <span class="text-primary font-semibold">Sampahku!</span> jaga kelestarian lingkungan</p>
         <div class="flex">
             <a href="{{ route('login') }}" class="text-primary border border-primary hover:bg-primary hover:text-white py-2 px-6 font-bold rounded-lg mr-6">Log In</a>
